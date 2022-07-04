@@ -1,0 +1,54 @@
+/*MAIN*/
+body{
+    background-color: rgb(238, 238, 238) !important;
+}
+.list-bg{
+    background-color: rgb(104, 33, 33) !important;
+    color: white !important;
+}
+.item-bg{
+    text-decoration: none;
+    color: white;
+    border-bottom: 0.80px solid black;
+}
+.item-bg:hover{
+    background-color: black;
+    color: white;
+}
+.nav-link{
+    color: white !important;
+}
+
+
+
+/*FOOTER*/
+
+footer {
+    padding: 2em; }
+  
+.footerer {
+    background: #121212; 
+}
+.footerer p {
+    color: rgba(255, 255, 255, 0.3); }
+    
+.footerer .footer-heading {
+    font-size: 30px;
+    color: #fff;
+    margin-bottom: 30px; 
+}
+.footerer .footer-heading .logo {
+    color: #fff; 
+    text-decoration: none;
+}
+
+/*ALERT CSS*/
+.xd-content .xd-body .xd-body-inner {
+    max-height: unset;
+}
+.xd-content .xd-body p {
+    color: rgb(0, 0, 0);
+}
+.xd-content .xd-button.xd-ok {
+    background: #119137;
+}

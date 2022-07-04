@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Homepage - P.E Department</title>
+        <link href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" rel="stylesheet">
+        <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" />
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    </head>
+    <body>
+        <div class="d-flex" id="wrapper">
+            <div class="border-end list-bg" id="sidebar-wrapper">
+                <div class="sidebar-heading border-bottom list-bg"> <b>P.E Department</b></div>
+                <div class="list-group">
+                    <a class="item-bg p-3" href="{% url 'admin_home' %}"> <i class='bx bx-home nav_logo-icon'></i> Home</a>
+                    <a class="item-bg p-3" href="{% url 'admin_borrow' %}"><i class='bx bxs-bookmarks'></i> Borrow</a>
+                    <a class="item-bg p-3" href="{% url 'admin_return' %}"><i class='bx bx-check-square'></i> Return</a>
+                    <a class="item-bg p-3" href="{% url 'admin_schedule' %}"><i class='bx bx-notepad' ></i> Scheduling</a>
+                    <a class="item-bg p-3" href="{% url 'admin_preorder' %}"><i class='bx bx-basket'></i> Pre-Order</a>
+                    <a class="item-bg p-3" href="{% url 'admin_block' %}"><i class='bx bx-user-x'></i> Blacked Listed User</a>
+                    <a class="item-bg p-3" href="{% url 'admin_inventory' %}"><i class='bx bx-layer'></i> Inventory</a>
+                    <a class="item-bg p-3" href="{% url 'admin_sales' %}"><i class='bx bx-detail' ></i> Total Sales</a>
+                    <br><br><br>
+                    <a class="item-bg p-3" href="{% url 'login' %}"><i class='bx bx-log-out' ></i> Logout</a>
+                </div>
+            </div>
+
+            <div id="page-content-wrapper">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                    <button class="navbar-toggler" type="button" id="sidebarToggle" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                </nav>
+                <div class="container-fluid">
+                    <h1 class="mt-4 text-center">Welcome Administrator!</h1>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="{% static 'js/sidenav.js' %}"></script>
+    </body>
+</html>

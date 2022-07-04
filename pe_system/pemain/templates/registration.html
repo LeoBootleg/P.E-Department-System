@@ -1,0 +1,95 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Registration - P.E Department</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/xxjapp/xdialog@3/xdialog.min.css"/>
+</head>
+
+<style>
+    body{
+       background-color: #4a040c;
+    }
+</style>
+<body>
+    <div class="container ">
+        <div class="row">
+            <div class="col-md-4 offset-md-4">
+                <div class="login-form bg-light mt-4 p-4">
+                    <form method="POST" class="row g-3">
+                        {% csrf_token %}
+                        <div class="text-center">
+                            <img src="{% static 'assets/user.png' %}" style="width: 150px;" alt="">
+                        </div>
+                        <h4>Registration - P.E Department</h4>
+                        <div class="">
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <label for="">Firstname</label>
+                                    <input type="text" id="first" name="firstname" class="form-control" placeholder="Enter Firstname">
+                                </div>
+                                <br><br>
+                                <div class="col-12">
+                                    <label for="">Lastname</label>
+                                    <input type="text" id="last" name="lastname" class="form-control" placeholder="Enter Lastname">
+                                </div>
+                                <br><br>
+                                <div class="col-12">
+                                    <label for="">Username</label>
+                                    <input type="text" id="user" name="username" class="form-control" placeholder="Enter Username">
+                                </div>
+                                <br><br>
+                                <div class="col-12">
+                                    <label for="">Password</label>
+                                    <input type="password" id="pass1" name="password1" class="form-control" placeholder="Enter Password">
+                                </div>
+                                <br><br>
+                                <div class="col-12">
+                                    <label for="">Retype</label>
+                                    <input type="password" id="pass2" name="password2" class="form-control" placeholder="Retype Password">
+                                </div>
+                                <div class="col-12">
+                                    <label for="">Email</label>
+                                    <input type="text" id="em" name="email" class="form-control" placeholder="Enter Email">
+                                </div>
+                                <div class="col-12">
+                                    <label for="">Course</label>
+                                    <input type="text" id="crs" name="course" class="form-control" placeholder="Enter Course">
+                                </div>
+                                <div class="col-12">
+                                    <label for="">Contact Number</label>
+                                    <input type="number" id="cont" name="contact" class="form-control" placeholder="Enter Number">
+                                </div>
+                                <div class="col-12">
+                                    <label for="">I.D Number</label>
+                                    <input type="text" id="idn" name="idnum" class="form-control" placeholder="Enter I.D Number">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="text-center">
+                                <div style="color: #a80f21;">
+                                    {% for message in messages %}
+                                    <p id="messages">{{message}}</p>
+                                    {% endfor %}	
+                                </div>
+                                <button type="submit" class="btn btn-dark" >Signup</button>
+                            </div>
+                        </div>
+                    </form>
+                    <hr class="mt-4">
+                    <div class="col-12">
+                        <p class="text-center mb-0">Have already an account? <a href="{% url 'login' %}">Login</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/xxjapp/xdialog@3/xdialog.min.js"></script>
+</body>
+</html>
